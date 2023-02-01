@@ -1,0 +1,16 @@
+# Here is a sample script for configuring a trunk between two Cisco switches, with native VLAN 100 and allowing only VLANs 1-100:
+! On Switch 1:
+conf t
+interface FastEthernet0/1
+switchport mode trunk
+switchport trunk native vlan 100
+switchport trunk allowed vlan 1-100
+exit
+
+! On Switch 2:
+conf t
+interface FastEthernet0/1
+switchport mode trunk
+switchport trunk native vlan 100
+switchport trunk allowed vlan 1-100
+exit
